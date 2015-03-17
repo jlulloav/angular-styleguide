@@ -1684,7 +1684,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ### Feature File Names
 ###### [Style [Y121](#style-y121)]
 
-  - Use consistent names for all components following a pattern that describes the component's feature then (optionally) its type. My recommended pattern is `feature.type.js`.
+  - Use consistent names for all components following a pattern that describes the component's feature then (optionally) its type. Our recommended pattern is `feature-type.js`.
 
     *Why?*: Provides a consistent way to quickly identify components.
 
@@ -1712,29 +1712,29 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
      */
 
     // controllers
-    avengers.controller.js
-    avengers.controller.spec.js
+    avengers-controller.js
+    avengers-controller-spec.js
 
     // services/factories
-    logger.service.js
-    logger.service.spec.js
+    logger-service.js
+    logger-service-spec.js
 
     // constants
     constants.js
 
     // module definition
-    avengers.module.js
+    avengers-module.js
 
     // routes
-    avengers.routes.js
-    avengers.routes.spec.js
+    avengers-routes.js
+    avengers-routes-spec.js
 
     // configuration
-    avengers.config.js
+    avengers-config.js
 
     // directives
-    avenger-profile.directive.js
-    avenger-profile.directive.spec.js
+    avenger-profile-directive.js
+    avenger-profile-directive-spec.js
     ```
 
   Note: Another common convention is naming controller files without the word `controller` in the file name such as `avengers.js` instead of `avengers.controller.js`. All other conventions still hold using a suffix of the type. Controllers are the most common type of component so this just saves typing and is still easily identifiable. I recommend you choose 1 convention and be consistent for your team. My preference is `avengers.controller.js`.
@@ -1745,7 +1745,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
      */
     // Controllers
     avengers.js
-    avengers.spec.js
+    avengers-spec.js
     ```
 
 ### Test File Names
@@ -1761,10 +1761,10 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
     /**
      * recommended
      */
-    avengers.controller.spec.js
-    logger.service.spec.js
-    avengers.routes.spec.js
-    avenger-profile.directive.spec.js
+    avengers-controller-spec.js
+    logger-service-spec.js
+    avengers-routes-spec.js
+    avenger-profile-directive-spec.js
     ```
 
 ### Controller Names
@@ -1781,7 +1781,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
      * recommended
      */
 
-    // avengers.controller.js
+    // avengers-controller.js
     angular
         .module
         .controller('HeroAvengersController', HeroAvengersController);
@@ -1801,7 +1801,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
      * recommended
      */
 
-    // avengers.controller.js
+    // avengers-controller.js
     angular
         .module
         .controller('AvengersController', AvengersController);
@@ -1823,7 +1823,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
      * recommended
      */
 
-    // logger.service.js
+    // logger-service.js
     angular
         .module
         .factory('logger', logger);
@@ -1843,7 +1843,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
      * recommended
      */
 
-    // avenger-profile.directive.js
+    // avenger-profile-directive.js
     angular
         .module
         .directive('xxAvengerProfile', xxAvengerProfile);
@@ -1856,7 +1856,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ### Modules
 ###### [Style [Y127](#style-y127)]
 
-  - When there are multiple modules, the main module file is named `app.module.js` while other dependent modules are named after what they represent. For example, an admin module is named `admin.module.js`. The respective registered module names would be `app` and `admin`.
+  - When there are multiple modules, the main module file is named `app-module.js` while other dependent modules are named after what they represent. For example, an admin module is named `admin.module.js`. The respective registered module names would be `app` and `admin`.
 
     *Why?*: Provides consistency for multiple module apps, and for expanding to large applications.
 
@@ -1865,7 +1865,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ### Configuration
 ###### [Style [Y128](#style-y128)]
 
-  - Separate configuration for a module into its own file named after the module. A configuration file for the main `app` module is named `app.config.js` (or simply `config.js`). A configuration for a module named `admin.module.js` is named `admin.config.js`.
+  - Separate configuration for a module into its own file named after the module. A configuration file for the main `app` module is named `app-config.js` (or simply `config.js`). A configuration for a module named `admin.module.js` is named `admin.config.js`.
 
     *Why?*: Separates configuration from module definition, components, and active code.
 
@@ -1874,7 +1874,7 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
 ### Routes
 ###### [Style [Y129](#style-y129)]
 
-  - Separate route configuration into its own file. Examples might be `app.route.js` for the main module and `admin.route.js` for the `admin` module. Even in smaller apps I prefer this separation from the rest of the configuration.
+  - Separate route configuration into its own file. Examples might be `app-route.js` for the main module and `admin-route.js` for the `admin` module. Even in smaller apps I prefer this separation from the rest of the configuration.
 
 **[Back to top](#table-of-contents)**
 
@@ -1979,34 +1979,34 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
         app.module.js
         app.config.js
         components/
-            calendar.directive.js
-            calendar.directive.html
-            user-profile.directive.js
-            user-profile.directive.html
+            calendar-directive.js
+            calendar-directive.html
+            user-profile-directive.js
+            user-profile-directive.html
         layout/
             shell.html
-            shell.controller.js
+            shell-controller.js
             topnav.html
             topnav.controller.js
         people/
             attendees.html
-            attendees.controller.js
+            attendees-controller.js
             people.routes.js
             speakers.html
-            speakers.controller.js
+            speakers-controller.js
             speaker-detail.html
-            speaker-detail.controller.js
+            speaker-detail-controller.js
         services/
-            data.service.js
-            localstorage.service.js
-            logger.service.js
-            spinner.service.js
+            data-service.js
+            localstorage-service.js
+            logger-service.js
+            spinner-service.js
         sessions/
             sessions.html
-            sessions.controller.js
-            sessions.routes.js
+            sessions-controller.js
+            sessions-routes.js
             session-detail.html
-            session-detail.controller.js
+            session-detail-controller.js
     ```
 
       ![Sample App Structure](https://raw.githubusercontent.com/johnpapa/angular-styleguide/master/assets/modularity-2.png)
@@ -2021,9 +2021,9 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
     */
 
     app/
-        app.module.js
-        app.config.js
-        app.routes.js
+        app-module.js
+        app-config.js
+        app-routes.js
         controllers/
             attendees.js
             session-detail.js
@@ -2033,10 +2033,10 @@ While this guide explains the *what*, *why* and *how*, I find it helpful to see 
             speaker-detail.js
             topnav.js
         directives/
-            calendar.directive.js
-            calendar.directive.html
-            user-profile.directive.js
-            user-profile.directive.html
+            calendar-directive.js
+            calendar-directive.html
+            user-profile-directive.js
+            user-profile-directive.html
         services/
             dataservice.js
             localstorage.js
@@ -2229,7 +2229,7 @@ Unit testing helps maintain clean code, as such I included some of my recommenda
 
     *Why?*: Both Jasmine and Mocha are widely used in the Angular community. Both are stable, well maintained, and provide robust testing features.
 
-    Note: When using Mocha, also consider choosing an assert library such as [Chai](http://chaijs.com). I prefer Mocha.
+    Note: When using Mocha, also consider choosing an assert library such as [Chai](http://chaijs.com).
 
 ### Test Runner
 ###### [Style [Y192](#style-y192)]
@@ -2308,13 +2308,13 @@ Unit testing helps maintain clean code, as such I included some of my recommenda
     *Why?*: Separating specs so they are not in a distributed build is easy with grunt or gulp.
 
     ```
-    /src/client/app/customers/customer-detail.controller.js
-                             /customer-detail.controller.spec.js
-                             /customers.controller.spec.js
-                             /customers.controller-detail.spec.js
-                             /customers.module.js
-                             /customers.route.js
-                             /customers.route.spec.js
+    /src/client/app/customers/customer-detail-controller.js
+                             /customer-detail-controller-spec.js
+                             /customers-controller-spec.js
+                             /customers-controller-detail-spec.js
+                             /customers-module.js
+                             /customers-route.js
+                             /customers-route-spec.js
     ```
 
 **[Back to top](#table-of-contents)**
